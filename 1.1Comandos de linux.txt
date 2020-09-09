@@ -1,0 +1,19 @@
+Instalar paquetes en el vagrantfile
+
+  end
+   config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y apache2
+    apt-get install -y nginx
+    apt-get install -y docker
+
+  SHELL
+
+
+Para ver todos los paquetes instalados
+apt llist --installed
+
+Para ver si un paquete en especifico esta instalado
+
+apt list ynombredelpaquete
+
